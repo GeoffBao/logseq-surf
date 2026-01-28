@@ -150,6 +150,8 @@
     "Settings"
     :import
     "Import data into Logseq"
+    :whiteboards
+    (t :left-side-bar/whiteboards)
     "Logseq"))
 
 (defn update-page-title!
@@ -213,4 +215,9 @@
                 :all-journals
                 :home)]
     (redirect! {:to route}))
+  (util/scroll-to-top))
+
+(defn go-to-whiteboards!
+  []
+  (redirect! {:to :whiteboards})
   (util/scroll-to-top))

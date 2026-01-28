@@ -287,6 +287,9 @@
    :ui/toggle-brackets                      {:binding "t b"
                                              :fn      config-handler/toggle-ui-show-brackets!}
 
+   :go/whiteboards                          {:binding "g w"
+                                             :fn      route-handler/go-to-whiteboards!}
+
    :go/search                               {:binding "mod+k"
                                              :fn      #(search :global)}
 
@@ -664,6 +667,7 @@
     (-> (build-category-map
          [:go/home
           :go/journals
+          :go/whiteboards
           :go/all-pages
           :go/flashcards
           :go/graph-view
