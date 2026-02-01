@@ -23,6 +23,7 @@ cljs-test-runner-out
 *.iml
 *.log
 .shadow-cljs
+.shadow-cljs-clean
 .idea
 .lein-*
 .nrepl-*
