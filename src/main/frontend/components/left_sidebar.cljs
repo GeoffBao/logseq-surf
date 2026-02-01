@@ -3,6 +3,7 @@
   (:require [clojure.string :as string]
             [frontend.components.block :as block]
             [frontend.components.dnd :as dnd-component]
+
             [frontend.components.icon :as icon]
             [frontend.components.repo :as repo]
             [frontend.config :as config]
@@ -232,15 +233,9 @@
               :icon "calendar"
               :shortcut :go/journals}))))
 
-      (sidebar-item
-       {:class "whiteboards-nav"
-        :active (and (not srs-open?)
-                     (= route-name :whiteboards))
-        :title (t :left-side-bar/whiteboards)
-        :on-click-handler (fn [e]
-                            (route-handler/go-to-whiteboards!))
-        :icon "palette"
-        :shortcut :go/whiteboards})
+
+
+
 
 
       (for [nav checked-navs]

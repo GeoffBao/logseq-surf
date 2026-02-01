@@ -11,7 +11,7 @@
             [frontend.components.repo :as repo]
             [frontend.components.settings :as settings]
             [frontend.components.user.login :as login]
-            [frontend.components.whiteboard.core :as whiteboard]
+
             [frontend.config :as config]
             [logseq.shui.demo :as shui]))
 
@@ -62,9 +62,7 @@
     {:name :all-journals
      :view journal/all-journals}]
 
-   ["/whiteboards"
-    {:name :whiteboards
-     :view whiteboard/whiteboards-page}]
+
 
    ["/plugins"
     {:name :plugins

@@ -2,6 +2,7 @@
   (:require [cljs-bean.core :as bean]
             [clojure.string :as string]
             [frontend.components.block :as block]
+
             [frontend.components.cmdk.core :as cmdk]
             [frontend.components.icon :as icon]
             [frontend.components.onboarding :as onboarding]
@@ -154,6 +155,8 @@
         :vector-search
         [[:.flex.items-center (ui/icon "file-search" {:class "text-md mr-2"}) "(Dev) VectorSearch"]
          (vector-search/vector-search-sidebar)]
+
+
 
         ["" [:span]])))
    (p/catch (fn [error]
@@ -458,7 +461,7 @@
           [:div.text-sm
            [:button.button.cp__right-sidebar-settings-btn {:on-click (fn [_e]
                                                                        (state/sidebar-add-block! repo "profiler" :profiler))}
-            "(Dev) Profiler"]])]]
+            "(Dev) Profiler"]])] ]
 
       [:.sidebar-item-list.flex-1.scrollbar-spacing.px-2
        (if @*anim-finished?
@@ -467,7 +470,7 @@
              (sidebar-item repo idx db-id block-type block-count)
              (str "sidebar-block-" db-id)))
          [:div.p-4
-          [:span.font-medium.opacity-50 "Loading ..."]])]]]))
+          [:span.font-medium.opacity-50 "Loading ..."]])]]] ))
 
 (rum/defcs sidebar < rum/reactive
   [state]
